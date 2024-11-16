@@ -32,8 +32,6 @@ Interrupt Lines (EXTI0-EXTI15)
 The STM32 ARM microcontroller features 23 event sources which are divided into two sections. The first section corresponds t external pins on each port which are P0-P15. The second section corresponds to RTC, ethernet, USB interrupts. Therefore, in the first section, we have 16 lines corresponding to line0 till line15. All of these map to a pin number.
 The diagram below shows how the GPIO pins are connected to the 16 interrupt lines:
 
-<img height =10% width=40% src="https://github.com/vasanthkumarch/EXPERIMENT-06-INTERRUPT-GENERATION-USING-PUSHBUTTON-AND-SIMULATING-THE-OUTPUT-/assets/36288975/3e1ededb-144c-4103-a64e-9132b7e06e1b">
-
 One important thing to note here is that same number pins are connected to line with the same number. All of these then join to form a single line. Additionally, we can not use two pins one one line at the same time. For example out of PA1, PB1, PC1, PD1, PE1, PF1 and PG1 you can only use a single pin out of all these. This is because they are all connected to the same line EXTI1. However you can use PA1 and PA2 at the same time as they are connected with different lines.
 
 Now each of these lines EXTI0-EXTI15 can be used to trigger an interrupt on different modes of the signal : rising edge, falling edge or rising_falling edge.
@@ -271,7 +269,7 @@ void assert_failed(uint8_t *file, uint32_t line)
 
 
 ## Output screen shots of proteus  :
-<img height =10% width=50% src="https://github.com/user-attachments/assets/27925dc9-ece3-4eb9-a209-6d3c96d3b355">
+<img height =5% width=40% src="https://github.com/user-attachments/assets/27925dc9-ece3-4eb9-a209-6d3c96d3b355">
 
 ## Result :
 Interfacing a push button and interrupt genrateion is simulated using proteus 
